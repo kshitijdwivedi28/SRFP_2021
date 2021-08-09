@@ -1,13 +1,20 @@
 import speech_recognition as sr
 import moviepy.editor as mp
+import os
 
 clip = mp.VideoFileClip(r"task_video_1.mp4") 
  
-clip.audio.write_audiofile(r"task2_converted.wav")
+clip.audio.write_audiofile(r"extracted_audio.wav")
+
+# Extracting audio using ffmpeg library
+
+command2wav = "ffmpeg -i task_video_1.mp4 -ab 256k -ar 44100 -vn extracted_audio.wav"
+
+os.system(command2wav)
 
 r = sr.Recognizer();
 
-audio = sr.AudioFile("task2_converted.wav")
+audio = sr.AudioFile("extracted_audio.wav")
 
 with audio as source:
   audio_file = r.record(source)
@@ -22,10 +29,12 @@ with audio as source:
 
 result = r.recognize_sphinx(audio_file)
 
-with open("recognized.txt",mode ='w') as file: 
+with open("transcripted_text.txt",mode ='w') as file: 
    file.write("\n") 
    file.write(result) 
-   print("Ready!")
+   file.write("\n")
+  
+print("Files are ready! check it out.")
    
    
    
