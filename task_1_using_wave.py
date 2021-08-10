@@ -1,36 +1,45 @@
+# Importing required dependencies
+
 import wave, math, contextlib
 import speech_recognition as sr
 import moviepy.editor as mp
-
 import datetime
+
+# Global variables for audio and video file paths 
 
 transcribed_audio_file_name = "output/task_audio.wav"
 video_file_name = "task_video.mp4"
 
+
 # Moviepy library being used for audio extraction 
 
-# audioclip = AudioFileClip(video_file_name)
 audioclip = mp.VideoFileClip(video_file_name)
 audioclip.audio.write_audiofile(transcribed_audio_file_name)
-
 
 #FFmpeg library used for audio extraction
 
 command2wav = "ffmpeg -i task_video_1.mp4 -ab 256k -ar 44100 -vn extracted_audio.wav"
-
 os.system(command2wav)
 
-# for finding the total length of the audio file
+
+
+# Calculating the length of audio file using contexlib library
+
 with contextlib.closing(wave.open(transcribed_audio_file_name,'r')) as f:
     frames = f.getnframes()
     rate = f.getframerate()
-    duration = frames / float(rate)
+    duration = frames / float(rate)                        # duration of the audio file
     
-total_segments = math.ceil(duration/10)
+total_segments = math.ceil(duration/10)                    # total no. of audio chunks 
+
+
 
 r = sr.Recognizer()
+
 i = 0
+
 start_time = datetime.datetime(2021,7,30,0,0,0)
+
 current_time = start_time
 end_time = 0
 time_add = 10
