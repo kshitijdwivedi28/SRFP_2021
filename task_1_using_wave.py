@@ -7,12 +7,18 @@ import datetime
 transcribed_audio_file_name = "output/task_audio.wav"
 video_file_name = "task_video.mp4"
 
+# Moviepy library being used for audio extraction 
 
 # audioclip = AudioFileClip(video_file_name)
-
 audioclip = mp.VideoFileClip(video_file_name)
-
 audioclip.audio.write_audiofile(transcribed_audio_file_name)
+
+
+#FFmpeg library used for audio extraction
+
+command2wav = "ffmpeg -i task_video_1.mp4 -ab 256k -ar 44100 -vn extracted_audio.wav"
+
+os.system(command2wav)
 
 # for finding the total length of the audio file
 with contextlib.closing(wave.open(transcribed_audio_file_name,'r')) as f:
