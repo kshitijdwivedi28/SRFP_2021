@@ -39,7 +39,6 @@ r = sr.Recognizer()
 i = 0
 
 start_time = datetime.datetime(2021,7,30,0,0,0)
-
 current_time = start_time
 end_time = 0
 time_add = 10
@@ -52,7 +51,8 @@ f2 = open("output/srt_file.srt",'w')
 
 for i in range(0, total_segments):
     with sr.AudioFile(transcribed_audio_file_name) as source:
-        audio = r.record(source, offset=i*10, duration=10)                #subclip function can also be used to divide the audio into segments
+        r.adjust_for_ambient_noise(source)                                # method to handle background noise
+        audio = r.record(source, offset=i*10, duration=10)                # subclip function can also be used to divide the audio into segments
     
     text = r.recognize_google(audio)
     
