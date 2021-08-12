@@ -14,7 +14,7 @@ video_file_name = "task_video.mp4"
 
 # Moviepy library being used for audio extraction 
 
-audioclip = mp.VideoFileClip(video_file_name)
+audioclip = mp.VideoFileClip(video_file_name)                  
 audioclip.audio.write_audiofile(transcribed_audio_file_name)
 
 #FFmpeg library used for audio extraction
@@ -35,7 +35,7 @@ total_segments = math.ceil(duration/10)                    # total no. of audio 
 
 
 
-r = sr.Recognizer()
+r = sr.Recognizer()                                        # defining recognizer class
 
 i = 0
 
