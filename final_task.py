@@ -21,3 +21,17 @@ import moviepy.editor as mp
 
 # Used for executing commands using os.system() method
 import os
+
+
+# Extracting audio from video using FFmpeg library
+# -i switch is used specify the path/filename of the input video
+# -ab switch is used to save the audio as a 256kbps WAV audio file.
+# -ar switch is used for the frequency/frame rate of the audio.
+#	-vn switch extracts the audio portion from a video.
+
+command_mp42wav = "ffmpeg -i task_1_video_1.mp4 -ab 256k -ar 44100 -vn task_audio.wav"
+
+# os.system() method is used to execute the ffmpeg library in command line
+os.system(command_mp42wav)
+
+
