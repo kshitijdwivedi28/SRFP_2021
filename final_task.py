@@ -29,7 +29,7 @@ import os
 # -ar switch is used for the frequency/frame rate of the audio.
 #	-vn switch extracts the audio portion from a video.
 
-command_mp42wav = "ffmpeg -i task_1_video_1.mp4 -ab 256k -ar 44100 -vn task_audio.wav"
+command_mp42wav = "ffmpeg -i task_video.mp4 -ab 256k -ar 44100 -vn task_audio.wav"
 
 # os.system() method is used to execute the ffmpeg library in command line
 os.system(command_mp42wav)
