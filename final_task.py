@@ -27,7 +27,7 @@ import os
 # -i switch is used specify the path/filename of the input video
 # -ab switch is used to save the audio as a 256kbps WAV audio file.
 # -ar switch is used for the frequency/frame rate of the audio.
-#	-vn switch extracts the audio portion from a video.
+# -vn switch extracts the audio portion from a video.
 
 command_mp42wav = "ffmpeg -i task_video.mp4 -ab 256k -ar 44100 -vn task_audio.wav"
 
