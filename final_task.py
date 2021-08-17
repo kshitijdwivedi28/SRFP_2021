@@ -23,6 +23,13 @@ import moviepy.editor as mp
 import os
 
 
+# Video File path
+video_file_path = r"input/task_video.mp4"
+
+# Audio file path
+audio_file_path = r"output/task_audio.wav"
+
+
 # Extracting audio from video using FFmpeg library
 # -i switch is used specify the path/filename of the input video
 # -ab switch is used to save the audio as a 256kbps WAV audio file.
@@ -34,4 +41,6 @@ command_mp42wav = "ffmpeg -i task_video.mp4 -ab 256k -ar 44100 -vn task_audio.wa
 # os.system() method is used to execute the ffmpeg library in command line
 os.system(command_mp42wav)
 
+
+    
 
