@@ -59,6 +59,8 @@ with contextlib.closing(wave.open(audio_file_path,'r')) as audio_file:
     rate = audio_file.getframerate()                                          # Sampling Frequency of the audio file is stored in rate variable
     duration = frames / float(rate)                                           # Duration is calculated using frames and rate variable
     
-               
+# Segmenting audio into parts of 10 secs to be transcribed into text and thereby calculating total segments of the audio
+total_segments = math.ceil(duration/10)  
+
     
 
