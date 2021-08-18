@@ -23,11 +23,17 @@ import moviepy.editor as mp
 import os
 
 
+
+
 # Video File path
 video_file_path = r"input/task_video.mp4"
 
 # Audio file path
 audio_file_path = r"output/task_audio.wav"
+
+
+
+
 
 
 # Extracting audio from video using FFmpeg library
@@ -42,5 +48,17 @@ command_mp42wav = "ffmpeg -i "+video_file_path+" -ab 256k -ar 44100 -vn "+audio_
 os.system(command_mp42wav)
 
 
+
+
+
+# For finding the total length of the audio file
+# The wave library is used to open the audio file to calculate the number of frames and the framerate with which duration of file has been calculated
+# contextlib.closing  works with the with statement to inform the context manager when the code block is entered and exited
+with contextlib.closing(wave.open(audio_file_path,'r')) as audio_file:
+    frames = audio_file.getnframes()                                          # Total number of audio frames is stored in frames variable     
+    rate = audio_file.getframerate()                                          # Sampling Frequency of the audio file is stored in rate variable
+    duration = frames / float(rate)                                           # Duration is calculated using frames and rate variable
+    
+               
     
 
