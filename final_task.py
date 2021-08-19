@@ -48,7 +48,7 @@ command_mp42wav = "ffmpeg -i "+video_file_path+" -ab 256k -ar 44100 -vn "+audio_
 os.system(command_mp42wav)
 
 
-
+print("\n AUDIO EXTRACTED SUCCESSFULLY ")           # check point message
 
 
 # For finding the total length of the audio file
@@ -62,5 +62,19 @@ with contextlib.closing(wave.open(audio_file_path,'r')) as audio_file:
 # Segmenting audio into parts of 10 secs to be transcribed into text and thereby calculating total segments of the audio
 total_segments = math.ceil(duration/10)  
 
-    
+   
+print("\n AUDIO LENGTH CALCULATED ")                  # checkpoint message
+
+print("\nFrames of the audio = ",frames)
+print("\nRate of the audio = ",rate)
+print("\nDuration of audio = ",duration)
+
+
+# Building up the SRT file 
+iterator = 0
+start_time = datetime.datetime(2021,7,30,0,0,0)
+start_time = datetime.datetime.ctime()
+current_time = start_time
+end_time = 0
+time_add = 60 
 
