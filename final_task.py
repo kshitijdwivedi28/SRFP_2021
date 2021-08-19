@@ -65,15 +65,14 @@ total_segments = math.ceil(duration/10)
    
 print("\n AUDIO LENGTH CALCULATED ")                  # checkpoint message
 
-print("\nFrames of the audio = ",frames)
-print("\nRate of the audio = ",rate)
-print("\nDuration of audio = ",duration)
+print("\nNo. of Audio Frames = ",frames)
+print("\nAudio Frame Rate = ",rate)
+print("\nDuration of Audio File = ",duration)
 
 
 # Building up the SRT file 
-iterator = 0
-start_time = datetime.datetime(2021,7,30,0,0,0)
-start_time = datetime.datetime.ctime()
+iterator_audio_segment = 0
+start_time = datetime.datetime.now()
 current_time = start_time
 end_time = 0
 time_add = 60 
