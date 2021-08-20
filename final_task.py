@@ -71,8 +71,30 @@ print("\nDuration of Audio File = ",duration)
 
 # Building up the SRT file 
 iterator_audio_segment = 0
-start_time = datetime.datetime(2021,7,30,0,0,0)     # time to instatiate the starting time for srt file       
+start_time = datetime.datetime(2021,8,20,0,0,0)     # time to instatiate the starting time for srt file       
 current_time = start_time                           # For the first segment the start time = current time 
 end_time = 0                                        # end time for the audio file, will be subsequently increase as audio segments are parsed
 time_add = 60                                       # time for each audio segment 
 
+# flag messages to check and verify the content
+print("\nSTART TIME = ",start_time)
+print("\nCURRENT TIME = ",current_time)
+print("\nSRT Variables initialized successfully")
+
+# Initliazing object of Recognizer class
+recog = sr.Recognizer()
+
+# Subtitle/Captions file in SRT format
+srt_file = open(r"output/subtitles.srt",'w')
+
+# Transcript File in txt format
+transcript_file = open(r"output/transcription.txt", 'w')
+
+
+for audio_segment in range(total_segments):
+    with sr.AudioFile(audio_file_path) as input:
+        record_audio = recog.record(input, offset = audio_segment*time_add, duration = time_add)
+        
+        text = recog.recognize_google(record_audio, language = 'en-IN')
+       
+    
