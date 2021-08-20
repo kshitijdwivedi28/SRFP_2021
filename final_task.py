@@ -90,11 +90,16 @@ srt_file = open(r"output/subtitles.srt",'w')
 # Transcript File in txt format
 transcript_file = open(r"output/transcription.txt", 'w')
 
-
+# loop to transcribe each segment of audio into text 
 for audio_segment in range(total_segments):
-    with sr.AudioFile(audio_file_path) as input:
-        record_audio = recog.record(input, offset = audio_segment*time_add, duration = time_add)
+    with sr.AudioFile(audio_file_path) as input:              
         
+        # audio input for a particular point of time 
+        # offset flag shifts the time from current time 
+        # duration flag marks the total time of the audio input
+        record_audio = recog.record(input, offset = audio_segment*time_add, duration = time_add)       
+        
+        # transcribing audio into text using Google Web Speech to Text API [free of cost, limited to 50 transcriptions per day]
         text = recog.recognize_google(record_audio, language = 'en-IN')
        
     
