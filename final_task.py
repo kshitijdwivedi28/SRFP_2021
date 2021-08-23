@@ -102,4 +102,24 @@ for audio_segment in range(total_segments):
         # transcribing audio into text using Google Web Speech to Text API [free of cost, limited to 50 transcriptions per day]
         text = recog.recognize_google(record_audio, language = 'en-IN')
        
+        # Adding transcripted text to the transcript file
+        transcript_file.write("Transcript of the Video : ")
+        transcript_file.write(text)
+        transcript_file.write("\n\n")
+        
+        # For the first audio_segment current time of audio = starting time of audio
+        if audio_segment == 0:
+            current_time = start_time
+            end_time = current_time + datetime.timedelta(0,time_add)
+          
+        # For the audio_segment
+        if audio_segment > 0:
+            current_time = end_time
+            end_time = current_time + datetime.timedelta(0,time_add)
+            
+        str_current_time = str(current_time.time())
+        str_end_time = str(end_time.time())
+        
+        
+        
     
