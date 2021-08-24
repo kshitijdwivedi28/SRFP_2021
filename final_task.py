@@ -74,7 +74,7 @@ iterator_audio_segment = 0
 start_time = datetime.datetime(2021,8,20,0,0,0)     # time to instatiate the starting time for srt file       
 current_time = start_time                           # For the first segment the start time = current time 
 end_time = 0                                        # end time for the audio file, will be subsequently increase as audio segments are parsed
-time_add = 60                                       # time for each audio segment 
+audio_segment_duration = 60                                       # time for each audio segment 
 
 # flag messages to check and verify the content
 print("\nSTART TIME = ",start_time)
@@ -97,7 +97,7 @@ for audio_segment in range(total_segments):
         # audio input for a particular point of time 
         # offset flag shifts the time from current time 
         # duration flag marks the total time of the audio input
-        record_audio = recog.record(input, offset = audio_segment*time_add, duration = time_add)       
+        record_audio = recog.record(input, offset = audio_segment*audio_segment_duration, duration = audio_segment_duration)       
         
         # transcribing audio into text using Google Web Speech to Text API [free of cost, limited to 50 transcriptions per day]
         text = recog.recognize_google(record_audio, language = 'en-IN')
@@ -107,19 +107,17 @@ for audio_segment in range(total_segments):
         transcript_file.write(text)
         transcript_file.write("\n\n")
         
-        # For the first audio_segment current time of audio = starting time of audio
+        # Setting up current_time for the audio segments 
         if audio_segment == 0:
-            current_time = start_time
-            end_time = current_time + datetime.timedelta(0,time_add)
-          
-        # For the audio_segment
-        if audio_segment > 0:
-            current_time = end_time
-            end_time = current_time + datetime.timedelta(0,time_add)
-            
+            current_time = start_time                                              # For the first audio_segment current time of audio = starting time of audio
+        else :
+            current_time = end_time                                                # For the other audio_segments current_time = end_time of the previous audio segment
+           
+         end_time = current_time + datetime.timedelta(0,audio_segment_duration)    # End Time being assigned for the audio_segment by adding up the audio_segment_duration to the current_time of audio_segment
+           
+        # Time values being changed to string to be written to the SRT File 
         str_current_time = str(current_time.time())
         str_end_time = str(end_time.time())
-        
-        
+
         
     
