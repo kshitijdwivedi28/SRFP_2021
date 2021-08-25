@@ -118,6 +118,22 @@ for audio_segment in range(total_segments):
         # Time values being changed to string to be written to the SRT File 
         str_current_time = str(current_time.time())
         str_end_time = str(end_time.time())
-
+        
+        
+        # Writing data into the subscript file considering the format of (.srt) file
+        srt_file.write(str(audio_segment+1))                                      # Audio Segment Number as a header for the subscript
+        srt_file.write("\n")                                                      # Newline character for writing data into next line 
+        srt_file.write(str_current_time)                                          # Starting time for the subscript
+        srt_file.write("\n")                                                      # Newline character for writing data into next line
+        srt_file.write(" --> ")                                                   # For aligning the data according to (.srt) format
+        srt_file.write(str_end_time)                                              # Ending time for the subscript
+        srt_file.write("\n")                                                      # Newline character for writing data into next line
+        srt_file.write(text)                                                      # Writing transcription into the file
+        srt_file.write("\n\n")                                                    # Newline character for writing data into next line (also leaving a line empty considering the (.srt) format
+ 
+# Closing files 
+srt_file.close()
+transcript_file.close()
+ 
         
     
