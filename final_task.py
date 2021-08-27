@@ -58,7 +58,7 @@ with contextlib.closing(wave.open(audio_file_path,'r')) as audio_file:
     duration = frames / float(rate)                                           # Duration is calculated using frames and rate variable
     
 # Segmenting audio into parts of 60 secs to be transcribed into text and thereby calculating total segments of the audio
-total_segments = math.ceil(duration/60)  
+total_segments = math.ceil(duration/10)  
 
    
 print("\n AUDIO LENGTH CALCULATED ")                  # checkpoint message
@@ -74,7 +74,7 @@ iterator_audio_segment = 0
 start_time = datetime.datetime(2021,8,20,0,0,0)     # time to instatiate the starting time for srt file       
 current_time = start_time                           # For the first segment the start time = current time 
 end_time = 0                                        # end time for the audio file, will be subsequently increase as audio segments are parsed
-audio_segment_duration = 60                                       # time for each audio segment 
+audio_segment_duration = 10                         # time for each audio segment 
 
 # flag messages to check and verify the content
 print("\nSTART TIME = ",start_time)
