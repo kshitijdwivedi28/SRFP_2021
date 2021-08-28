@@ -74,7 +74,8 @@ iterator_audio_segment = 0
 start_time = datetime.datetime(2021,8,20,0,0,0)     # time to instatiate the starting time for srt file       
 current_time = start_time                           # For the first segment the start time = current time 
 end_time = 0                                        # end time for the audio file, will be subsequently increase as audio segments are parsed
-audio_segment_duration = 10                         # time for each audio segment 
+audio_segment_duration = 5                          # time for each audio segment 
+# still mis_match changed to 5
 
 # flag messages to check and verify the content
 print("\nSTART TIME = ",start_time)
@@ -100,7 +101,8 @@ for audio_segment in range(total_segments):
         record_audio = recog.record(input, offset = audio_segment*audio_segment_duration, duration = audio_segment_duration)       
         
         # transcribing audio into text using Google Web Speech to Text API [free of cost, limited to 50 transcriptions per day]
-        text = recog.recognize_google(record_audio, language = 'en-IN')
+        # language field removed - 28/8 
+        text = recog.recognize_google(record_audio)    
        
         # Adding transcripted text to the transcript file
         transcript_file.write("Transcript of the Video : ")
