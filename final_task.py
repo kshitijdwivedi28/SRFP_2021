@@ -10,7 +10,6 @@ import math
 import contextlib          
 
 # Used for converting the audio into text 
-
 import speech_recognition as sr
 
 # Used for directing and calculating timestamps for building up on SRT file
