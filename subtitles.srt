@@ -1,0 +1,96 @@
+1
+00:00:02 --> 00:00:05,662
+This video is for testing purposes only.
+
+2
+00:00:05,662 --> 00:00:11,940
+First few seconds were left blank intentionally to adjust for ambient noise.
+
+3
+00:00:11,940 --> 00:00:19,265
+Hi, Kshitij Dwivedi here, a computer science undergrad at Jamia Millia Islamia, New Delhi.
+
+5
+00:00:19,265 --> 00:00:26,590
+SRFP the Summer Research Fellowship program is organised by the three national Science Academies 
+
+6
+00:00:26,590 --> 00:00:33,391
+namely Indian Academy of Sciences, Bengaluru, Indian National Science Academy, New Delhi and 
+
+7
+00:00:33,391 --> 00:00:37,577
+The National Academy of Sciences, Prayagraj every year.
+
+9
+00:00:37,577 --> 00:00:42,809
+In this program, students/teachers are offered several two-month Summer Fellowships 
+
+10
+00:00:42,809 --> 00:00:49,087
+to enable them to work with scientists associated with the three Academies.
+
+12
+00:00:49,087 --> 00:00:55,366
+Students and teachers from all universities and colleges affiliated to UGC/AICTE/MCI or 
+
+13
+00:00:55,366 --> 00:01:00,598
+Accredited Institutions of State Universities can apply for these Fellowships.
+
+15
+00:01:00,598 --> 00:01:09,492
+This year in 2021, I have been selected under the SRF Program and assigned under a mentor 
+
+16
+00:01:09,492 --> 00:01:16,294
+Dr. Sudarshan Iyengar, an Associate Professor at Indian Institute of Technology (IIT) Ropar.
+
+18
+00:01:16,294 --> 00:01:24,142
+For this internship I have been tasked to learn the programming language python which is 
+
+19
+00:01:24,142 --> 00:01:33,036
+one of the prominent languages these days due to its wide area applications in the field of 
+
+20
+00:01:33,036 --> 00:01:39,314
+machine learning, data science, artificial intelligence, natural language processing and many more. 
+
+21
+00:01:39,314 --> 00:01:45,070
+I know the basic constructs of python but not in depth.
+
+23
+00:01:45,070 --> 00:01:53,441
+So, the first task I have been assigned is to create a video introducing myself and 
+
+24
+00:01:53,441 --> 00:02:01,812
+conversing a paragraph of text having myself as the speaker which I am doing right now.
+
+25
+00:02:01,812 --> 00:02:10,706
+After this video, I have to extract audio from it and then convert the audio into text. 
+
+26
+00:02:10,706 --> 00:02:18,554
+In simpler words, a SPEECH TO TEXT based system like Siri, Google AI assistant etc.
+
+28
+00:02:18,554 --> 00:02:29,541
+Once done, I have to align this text with the video as subtitles to this video with the maximum accuracy possible.
+
+29
+00:02:29,541 --> 00:02:32,157
+This is my entire task.
+
+30
+00:02:32,157 --> 00:02:35,820
+We wrap up with the video now.
+
+31
+00:02:35,820 --> 00:02:39,482
+Thanks a lot for listening till here.
+
