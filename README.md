@@ -1,3 +1,3 @@
 # SRFP_2021
 
-<p> Project work resumed on 14th feb 2022. </p>
+<p> Project work completed as on National Science Day, 28th Feb 2022 <p>
