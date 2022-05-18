@@ -4,8 +4,11 @@ import tkinter
 # creating object 
 root = tkinter.Tk()
 
+# Title of the Window
+root.title("SRFP PROJECT BY KSHITIJ DWIVEDI")
+
 # Creating Label Widget which puts up a text on screen
-headline = tkinter.Label(root, text = "SRFP PROJECT - SUBTITLE (SRT FILE) GENERATOR")
+headline = tkinter.Label(root, text = "SUBTITLE (SRT FILE) GENERATOR AND ALIGNER")
 
 # Putting it up on screen and pack the window size as much as the text within, puts the text in center of the window
 headline.pack()
@@ -19,10 +22,11 @@ headline.pack()
 # Inputting file path from user and printing it
 file_path = tkinter.Label(root, text = "Enter video file path : ")
 file_path.pack(side = tkinter.LEFT)
+
 enter_data = tkinter.Entry(root, width = 50)
 enter_data.pack(side = tkinter.LEFT)
-
-
+# For default input in the 0th Input field
+enter_data.insert(0, "Enter video file path :")
 
 # Note, wanted to use grid here for printing the data but can't because we can only use either pack or grid.
 
@@ -41,8 +45,8 @@ def button_method():
     # Input files accordingly
     # Generate the output 
      
-    # 1. Extract Audio
-    # 2. Audio to Transcript
+    # 1. Extract Audio (Using ffmpeg)
+    # 2. Audio to Transcript (Using Googlespeech Web API)
     # 3. Audio to Subtitles (By Splitting on Silence)
     # 4. Audio to Subtitles (By Dividing the text into constant time frames)
     # 5. Transcript to Subtitles (Forced Alignment)
