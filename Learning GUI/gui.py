@@ -1,14 +1,22 @@
 # importing module
 import tkinter
+from turtle import position
 
 # creating object 
 root = tkinter.Tk()
 
+# No feature in tkinter for adjusting title, so calculating the space for positioning the title customized
+width = root.winfo_screenwidth()
+space = (" " * (int(width)//20))
+
 # Title of the Window
-root.title("SRFP PROJECT BY KSHITIJ DWIVEDI")
+root.title(space + "SRFP PROJECT BY KSHITIJ DWIVEDI")
+ 
+# icon at the top left side
+root.iconbitmap("D:\Internship SRFP\SRFP_2021\Learning GUI\icon.ico")
 
 # Creating Label Widget which puts up a text on screen
-headline = tkinter.Label(root, text = "SUBTITLE (SRT FILE) GENERATOR AND ALIGNER")
+headline = tkinter.Label(root, text = "\nSUBTITLE (SRT FILE) GENERATOR AND ALIGNER")
 
 # Putting it up on screen and pack the window size as much as the text within, puts the text in center of the window
 headline.pack()
@@ -20,13 +28,17 @@ headline.pack()
 
 
 # Inputting file path from user and printing it
-file_path = tkinter.Label(root, text = "Enter video file path : ")
-file_path.pack(side = tkinter.LEFT)
+file_path = tkinter.Label(root, text = "\nEnter video file path : ")
+file_path.pack()
 
 enter_data = tkinter.Entry(root, width = 50)
-enter_data.pack(side = tkinter.LEFT)
+enter_data.pack()
 # For default input in the 0th Input field
 enter_data.insert(0, "Enter video file path :")
+
+# As there's no widget for putting space in back. So,customized for creating the space between widgets
+line_space = tkinter.Label(root, text = "")
+line_space.pack()
 
 # Note, wanted to use grid here for printing the data but can't because we can only use either pack or grid.
 
@@ -62,6 +74,10 @@ submit_button = tkinter.Button(root, text = "Click here to Generate Subtitles!",
 # Put up the button on screen
 # Using pack only for keeping the button in center
 submit_button.pack()
+
+# exit button
+exit_button = tkinter.Button(root, text = "Exit Program", padx = 10, pady = 5, command = root.quit)
+exit_button.pack(side = tkinter.BOTTOM)
 
 # Hovering on the screen and keeping the program running until the window is closed
 root.mainloop()

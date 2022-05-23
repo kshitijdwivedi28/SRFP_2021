@@ -1,7 +1,5 @@
 import tkinter
 
-from pyparsing import opAssoc
-
 root = tkinter.Tk()
 root.title("SIMPLE CALCULATOR")
 
