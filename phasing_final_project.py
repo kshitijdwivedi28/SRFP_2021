@@ -5,7 +5,7 @@ from PIL import Image
 def submit_button_action():
     
     # EXTRACTING AUDIO FROM VIDEO -- START
-    global video_file_path, audio_file_path, srt_file_path
+    global video_file_path, audio_file_path
     
     video_file_path = file_path_data.get()
     
@@ -44,21 +44,20 @@ def line_break():
     
 def with_transcript_action():
     
-    file_path_label = tkinter.Label(root, text = "\nEnter Transcript File Path", font = ("Times New Roman", 12, "bold"))
-    file_path_label.pack()
+    global audio_file_path
     
-    file_path_data = tkinter.Entry(root, width = 100)
-    file_path_data.pack()
+    transcript_file_path_label = tkinter.Label(root, text = "\nEnter Transcript File Path", font = ("Times New Roman", 12, "bold"))
+    transcript_file_path_label.pack()
     
-    transcript_file_path = file_path_data.get()
+    transcript_file_path_data = tkinter.Entry(root, width = 100)
+    transcript_file_path_data.pack()
     
-    if not os.path.isfile(transcript_file_path):
+    transcript_file_path = transcript_file_path_data.get()
+    
+    if len(transcript_file_path_data) > 0 and not os.path.isfile(transcript_file_path):
         sys.exit("ERROR! INCORRECT TRANSCRIPT FILE PATH")
     
     
-    
-    
-
 video_file_path = ""
 audio_file_path = ""
 transcript_file_path = ""
