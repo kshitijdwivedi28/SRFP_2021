@@ -20,13 +20,10 @@ with contextlib.closing(wave.open(audio_file_path, 'r')) as audio_file:
 
 total_segments = math.ceil(duration / 5)
 
-print("\n AUDIO LENGTH CALCULATED ")  
-
-
-print("\nNo. of Audio Frames = ", frames)
-print("\nAudio Frame Rate = ", rate)
-print("\nDuration of Audio File = ", duration)
-
+# print("\n AUDIO LENGTH CALCULATED ")  
+# print("\nNo. of Audio Frames = ", frames)
+# print("\nAudio Frame Rate = ", rate)
+# print("\nDuration of Audio File = ", duration)
 
 iterator_audio_segment = 0
 start_time = datetime.datetime(2021, 8, 20, 0, 0, 0)
@@ -34,16 +31,13 @@ current_time = start_time
 end_time = 0  
 audio_segment_duration = 5
 
-
-print("\nSTART TIME = ", start_time)
-print("\nCURRENT TIME = ", current_time)
-print("\nSRT Variables initialized successfully")
-
+# print("\nSTART TIME = ", start_time)
+# print("\nCURRENT TIME = ", current_time)
+# print("\nSRT Variables initialized successfully")
 
 recog = sr.Recognizer()
 
 srt_file_handler = open(srt_file_path, 'w+')
-
 
 transcript_file_handler = open(transcript_file_path, 'w+')
 

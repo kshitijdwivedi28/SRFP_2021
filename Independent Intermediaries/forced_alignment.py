@@ -29,8 +29,6 @@ def get_word_count(transcript_file_path):
                 
     return word_count
         
-        
-        
 
 audio_file_path = input("ENTER AUDIO FILE PATH : ")
 transcript_file_path = input("ENTER TRANSCRIPT FILE PATH : ")
@@ -50,7 +48,8 @@ with contextlib.closing(wave.open(audio_file_path, 'r')) as audio_file:
     duration = frames / float(rate)
 
 hours, minutes, seconds = extracting_time(duration)
-print(duration, hours, minutes, seconds)
+
+# print(duration, hours, minutes, seconds)
 
 transcript_file_handler = open(transcript_file_path, 'r')
 transcript_data_lines = transcript_file_handler.readlines()

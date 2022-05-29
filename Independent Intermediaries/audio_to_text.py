@@ -1,7 +1,6 @@
 import speech_recognition as sr_module, os, sys
 
 # user input paths 
-
 audio_file_path = input("ENTER AUDIO FILE PATH : ")
 transcript_file_path = input("ENTER TRANSCRIPT FILE PATH :")
 
@@ -9,7 +8,6 @@ if not os.path.isfile(audio_file_path):
     sys.exit("ERROR! INCORRECT AUDIO FILE PATH")
 elif not os.path.isfile(transcript_file_path):
     sys.exit("ERROR! INCORRECT TRANSCRIPT FILE PATH")
-
 
 recorder = sr_module.Recognizer()
 
@@ -19,7 +17,6 @@ with audio_file as source:
     # modification 1 - adjust for ambient noise 
     recorder.adjust_for_ambient_noise(source, duration=2)
     record_data = recorder.record(source)
-
 
 try:
     print("TRANSCRIPTING DATA : ")

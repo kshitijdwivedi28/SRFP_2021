@@ -1,11 +1,8 @@
 import os, sys
 from re import sub
-
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
-
 from speech_recognition import Recognizer, AudioFile, UnknownValueError, RequestError
-
 
 def converting_time(curr_time):
     hour = int((curr_time/60)/60)
@@ -48,7 +45,6 @@ elif not os.path.isfile(srt_file_path):
 
 
 recorder = Recognizer()
-
 
 time_transcript = []
 srt_transcript = []
@@ -106,9 +102,9 @@ for i, time_value in enumerate(time_transcript):
     subtitles += srt_block
 
 
-print(time_transcript)
-print(srt_transcript)
-print(subtitles)
+# print(time_transcript)
+# print(srt_transcript)
+# print(subtitles)
 
 srt_file_handler = open(srt_file_path, 'w')
 srt_file_handler.write(subtitles)
