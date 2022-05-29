@@ -13,7 +13,7 @@ space = (" " * (int(width)//15))
 root.title(space + "SRFP PROJECT BY KSHITIJ DWIVEDI")
  
 # icon at the top left side
-root.iconbitmap("D:\Internship SRFP\SRFP_2021\Learning GUI\icon.ico")
+root.iconbitmap("D:\Internship_SRFP\SRFP_2021\Learning GUI\icon.ico")
 
 # Creating Label Widget which puts up a text on screen
 headline = tkinter.Label(root, text = "\nSUBTITLE (SRT FILE) GENERATOR AND ALIGNER", font = ("Times New Roman", 20, "bold"))
@@ -37,7 +37,7 @@ gif_label = tkinter.Label(root, text = "HOW IT WORKS", font = ("Times New Roman"
 gif_label.pack()
 
 
-gif_file = "D:\Internship SRFP\SRFP_2021\Learning GUI\gif_for_gui.gif"
+gif_file = "D:\Internship_SRFP\SRFP_2021\Learning GUI\gif_for_gui.gif"
 file_info = Image.open(gif_file)
 
 # getting the number of frames from gif, as tkinter can render one frame at a time, so will loop through frames
@@ -70,16 +70,18 @@ animation(count)
 
 
 # Inputting file path from user and printing it
-file_path = tkinter.Label(root, text = "\nEnter Video File Path", font = ("Times New Roman", 12))
-file_path.pack()
+file_path_label = tkinter.Label(root, text = "\nEnter Video File Path", font = ("Times New Roman", 12))
+file_path_label.pack()
 
-enter_data = tkinter.Entry(root, width = 50)
-enter_data.pack()
+file_path_data = tkinter.Entry(root, width = 50)
+file_path_data.pack()
 # For default input in the 0th Input field
-enter_data.insert(0, "Enter Video file path :")
+file_path_data.insert(0, "Enter Video file path :")
 
 line_space = tkinter.Label(root, text = "")
 line_space.pack()
+
+
 
 # Note, wanted to use grid here for printing the data but can't because we can only use either pack or grid.
 
@@ -90,19 +92,10 @@ def button_method():
     # new_text.pack(side = tkinter.BOTTOM)
     
     # get() in used to take the input data from the input entry field
-    entered_file_path = tkinter.Label(root, text = "Entered video file path is : " + enter_data.get())
-    entered_file_path.pack(side = tkinter.BOTTOM)
+    entered_file_path = tkinter.Label(root, text = "Entered video file path is : " + file_path_data.get())
+    entered_file_path.pack()
     
-    # Todo - when button clicked run the python script to generate srt - 
-    # So will provide options through 5 buttons first
-    # Input files accordingly
-    # Generate the output 
-     
-    # 1. Extract Audio (Using ffmpeg)
-    # 2. Audio to Transcript (Using Googlespeech Web API)
-    # 3. Audio to Subtitles (By Splitting on Silence)
-    # 4. Audio to Subtitles (By Dividing the text into constant time frames)
-    # 5. Transcript to Subtitles (Forced Alignment)
+    
     
     
 # Creating buttons

@@ -1,0 +1,10 @@
+[x] 1. Get video file path from user. (video.mp4)
+[x] 2. Build the extracted audio file. (extracted_audio.wav)
+[ ] 3. Then ask for options -
+[ ]      i) Generate SRT with Transcript 
+[ ]      ii) Generate SRT without Transcript
+[ ] 4. Depending upon choice, ask for Transcript file or make it optional
+[ ] 5. Parse the file paths to the back end program
+[ ] 6. Generate the final file in the same directory (video_name_subtitles.srt), when button is clicked
+
+
