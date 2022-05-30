@@ -1,3 +1,3 @@
 # SRFP_2021
 
-<p> Project work restarted to develop GUI Module <p>
+<p> Project work in testing phase <p>
