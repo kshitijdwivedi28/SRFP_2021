@@ -1,5 +1,5 @@
 import os, sys
-from re import sub
+
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 from speech_recognition import Recognizer, AudioFile, UnknownValueError, RequestError
@@ -77,7 +77,7 @@ for i, audio_chunk in enumerate(chunks, start = 1):
         audio_record = recorder.record(source)
         
         try:
-            transcript = recorder.recognize_google(audio_record)
+            transcript = recorder.recognize_google(audio_record, language = 'en-IN')
         except (UnknownValueError, RequestError):
             print("ERROR! GOOGLE COULD NOT RECOGNIZE DATA.")
             print(f"THIS ERROR IS ENCOUNTERED AT AUDIO CHUNK {i}")
