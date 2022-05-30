@@ -114,6 +114,3 @@ transcript_file_handler.write(complete_transcript)
 transcript_file_handler.close()
 
 print("\n\nPROGRAM COMPLETED SUCCESSFULLY. CHECK THE FILES! \n\n")
-
-
-# 2nd referenced method 

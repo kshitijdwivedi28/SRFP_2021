@@ -1,0 +1,64 @@
+1
+00:00:00,000 --> 00:00:02,866
+This video is for testing purposes only.
+
+2
+00:00:02,866 --> 00:00:09,532
+First few seconds were left blank intentionally to adjust for ambient noise.
+
+3
+00:00:09,532 --> 00:00:17,091
+Hi it is the way the hairs of computer science undergraduate at jamia millia islamia new delhi.
+
+4
+00:00:17,091 --> 00:00:18,225
+Srs.
+
+5
+00:00:18,225 --> 00:00:35,574
+The summer research fellowship programme is organised by the three national science academy namely indian academy of sciences bengaluru indian national science academy new delhi and the national academy of sciences prayagraj every year.
+
+6
+00:00:35,574 --> 00:00:48,122
+In this program students teachers are offered several 2 months summer fellowship to enable them to work with the scientist associated with the three academy.
+
+7
+00:00:48,122 --> 00:00:56,81
+Students and teachers from all universities and colleges affiliated to ugc aicte.
+
+8
+00:00:56,81 --> 00:01:03,55
+Mci accredited institutions of state universities can apply for this fellow.
+
+9
+00:01:03,55 --> 00:01:19,046
+This year in 2021 i have been selected under the srf program and assigned under the mental doctor sachin i am an associate professor at indian institute of technology iit ropar.
+
+10
+00:01:19,046 --> 00:01:27,23
+For this internship i have been tasked to learn the programming language python which is one of the prominent languages these days.
+
+11
+00:01:27,23 --> 00:01:42,42
+Why did applications in the field of machine learning data science artificial intelligence natural language processing and many more i know the basic constructs of python but not in death.
+
+12
+00:01:42,42 --> 00:01:55,229
+The first task i have been assigned to create a video introducing myself and converting a paragraph of text having myself as the speaker which i am doing right now.
+
+13
+00:01:55,229 --> 00:02:01,65
+After this video i have to extract audio from it and then convert the audio into tech.
+
+14
+00:02:01,65 --> 00:02:08,901
+In simple words a speech to text based system like siri google assistant at 17.
+
+15
+00:02:08,901 --> 00:02:17,252
+Once done i have to align the text with the video subtitles to this video with the maximum accuracy possible.
+
+16
+00:02:17,252 --> 00:02:23,348
+This is my entire talk video now thanks a lot for listening till here.
+
