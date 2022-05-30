@@ -63,7 +63,7 @@ space = (" " * (int(width)//8) + "         ")
 
 root.title(space + "SRFP PROJECT BY KSHITIJ DWIVEDI")
  
-root.iconbitmap("D:\Internship_SRFP\SRFP_2021\Learning GUI\icon.ico")
+root.iconbitmap("./Learning GUI/icon.ico")
 
 headline = tkinter.Label(root, text = "\nSUBTITLE (SRT FILE) GENERATOR AND ALIGNER", font = ("Times New Roman", 20, "bold"))
 
@@ -75,7 +75,7 @@ line_break()
 gif_label = tkinter.Label(root, text = "HOW IT WORKS", font = ("Times New Roman", 16, "bold"))
 gif_label.pack()
 
-gif_file = "D:\Internship_SRFP\SRFP_2021\Learning GUI\workflow_gui.gif"
+gif_file = "./Learning GUI/workflow_gui.gif"
 file_info = Image.open(gif_file)
 
 frames = file_info.n_frames

@@ -42,10 +42,11 @@ def audio_to_srt_chunks(audio_file_path, srt_file_path):
     subtitles = ""
 
     audio_file = AudioSegment.from_wav(audio_file_path)  
+    # min_silence_len, silence_thresh, keep_silence can be adjusted according to the type of audio and noise in the backgroud
     chunks = split_on_silence(audio_file,
-        min_silence_len = 800,
-        silence_thresh = audio_file.dBFS-14, 
-        keep_silence = 200)
+        min_silence_len = 500,
+        silence_thresh = -60, 
+        keep_silence = 500)
 
     counter = 0
 
