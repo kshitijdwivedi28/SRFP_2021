@@ -1,96 +1,168 @@
 1
-00:00:02,698 --> 00:00:06,356
+00:00:03,290 --> 00:00:06,805
 This video is for testing purposes only.
 
 2
-00:00:06,356 --> 00:00:12,628
-First few seconds were left blank intentionally to adjust for ambient noise.
+00:00:06,805 --> 00:00:10,321
+First few seconds were left blank intentionally 
 
 3
-00:00:12,628 --> 00:00:19,945
-Hi, Kshitij Dwivedi here, a computer science undergrad at Jamia Millia Islamia, New Delhi.
+00:00:10,321 --> 00:00:12,832
+to adjust for ambient noise.
 
 4
-00:00:19,945 --> 00:00:27,263
-SRFP the Summer Research Fellowship program is organised by the three national Science Academies 
+00:00:12,832 --> 00:00:16,850
+Hi, Kshitij Dwivedi here, a computer science undergrad 
 
 5
-00:00:27,263 --> 00:00:34,057
-namely Indian Academy of Sciences, Bengaluru, Indian National Science Academy, New Delhi and 
+00:00:16,850 --> 00:00:19,864
+at Jamia Millia Islamia, New Delhi.
 
 6
-00:00:34,057 --> 00:00:38,239
-The National Academy of Sciences, Prayagraj every year.
+00:00:19,864 --> 00:00:22,877
+SRFP the Summer Research Fellowship program 
 
 7
-00:00:38,239 --> 00:00:43,466
-In this program, students/teachers are offered several two-month Summer Fellowships 
+00:00:22,877 --> 00:00:26,896
+is organised by the three national Science Academies 
 
 8
-00:00:43,466 --> 00:00:49,737
-to enable them to work with scientists associated with the three Academies.
+00:00:26,896 --> 00:00:29,909
+namely Indian Academy of Sciences, Bengaluru, 
 
 9
-00:00:49,737 --> 00:00:56,010
-Students and teachers from all universities and colleges affiliated to UGC/AICTE/MCI or 
+00:00:29,909 --> 00:00:33,425
+Indian National Science Academy, New Delhi and 
 
 10
-00:00:56,010 --> 00:01:01,237
-Accredited Institutions of State Universities can apply for these Fellowships.
+00:00:33,425 --> 00:00:37,443
+The National Academy of Sciences, Prayagraj every year.
 
 11
-00:01:01,237 --> 00:01:10,122
-This year in 2021, I have been selected under the SRF Program and assigned under a mentor 
+00:00:37,443 --> 00:00:40,457
+In this program, students/teachers are offered 
 
 12
-00:01:10,122 --> 00:01:16,917
-Dr. Sudarshan Iyengar, an Associate Professor at Indian Institute of Technology (IIT) Ropar.
+00:00:40,457 --> 00:00:42,466
+several two-month Summer Fellowships 
 
 13
-00:01:16,917 --> 00:01:24,757
-For this internship I have been tasked to learn the programming language python which is 
+00:00:42,466 --> 00:00:45,982
+to enable them to work with scientists 
 
 14
-00:01:24,757 --> 00:01:33,642
-one of the prominent languages these days due to its wide area applications in the field of 
+00:00:45,982 --> 00:00:48,493
+associated with the three Academies.
 
 15
-00:01:33,642 --> 00:01:39,914
-machine learning, data science, artificial intelligence, natural language processing and many more. 
+00:00:48,493 --> 00:00:52,512
+Students and teachers from all universities and colleges 
 
 16
-00:01:39,914 --> 00:01:45,664
-I know the basic constructs of python but not in depth.
+00:00:52,512 --> 00:00:54,521
+affiliated to UGC/AICTE/MCI or 
 
 17
-00:01:45,664 --> 00:01:54,027
-So, the first task I have been assigned is to create a video introducing myself and 
+00:00:54,521 --> 00:00:57,534
+Accredited Institutions of State Universities can 
 
 18
-00:01:54,027 --> 00:02:02,390
-conversing a paragraph of text having myself as the speaker which I am doing right now.
+00:00:57,534 --> 00:00:59,544
+apply for these Fellowships.
 
 19
-00:02:02,390 --> 00:02:11,275
-After this video, I have to extract audio from it and then convert the audio into text. 
+00:00:59,544 --> 00:01:04,063
+This year in 2021, I have been selected under 
 
 20
-00:02:11,275 --> 00:02:19,115
-In simpler words, a SPEECH TO TEXT based system like Siri, Google AI assistant etc.
+00:01:04,063 --> 00:01:08,082
+the SRF Program and assigned under a mentor 
 
 21
-00:02:19,115 --> 00:02:29,105
-Once done, I have to align this text with the video as subtitles to this video with the maximum accuracy possible.
+00:01:08,082 --> 00:01:11,597
+Dr. Sudarshan Iyengar, an Associate Professor at 
 
 22
-00:02:30,091 --> 00:02:32,704
-This is my entire task.
+00:01:11,597 --> 00:01:14,612
+Indian Institute of Technology (IIT) Ropar.
 
 23
-00:02:32,704 --> 00:02:36,364
-We wrap up with the video now.
+00:01:14,612 --> 00:01:18,629
+For this internship I have been tasked to 
 
 24
-00:02:36,364 --> 00:02:40,022
+00:01:18,629 --> 00:01:21,141
+learn the programming language python 
+
+25
+00:01:21,141 --> 00:01:25,661
+which is one of the prominent languages these days 
+
+26
+00:01:25,661 --> 00:01:30,684
+due to its wide area applications in the field of 
+
+27
+00:01:30,684 --> 00:01:33,698
+machine learning, data science, artificial intelligence, 
+
+28
+00:01:33,698 --> 00:01:36,711
+natural language processing and many more. 
+
+29
+00:01:36,711 --> 00:01:42,237
+I know the basic constructs of python but not in depth.
+
+30
+00:01:42,237 --> 00:01:46,756
+So, the first task I have been assigned is 
+
+31
+00:01:46,756 --> 00:01:50,273
+to create a video introducing myself and 
+
+32
+00:01:50,273 --> 00:01:53,286
+conversing a paragraph of text having 
+
+33
+00:01:53,286 --> 00:01:58,309
+myself as the speaker which I am doing right now.
+
+34
+00:01:58,309 --> 00:02:03,332
+After this video, I have to extract audio from it 
+
+35
+00:02:03,332 --> 00:02:06,847
+and then convert the audio into text. 
+
+36
+00:02:06,847 --> 00:02:11,368
+In simpler words, a SPEECH TO TEXT based system 
+
+37
+00:02:11,368 --> 00:02:14,381
+like Siri, Google AI assistant etc.
+
+38
+00:02:14,381 --> 00:02:19,906
+Once done, I have to align this text with the video 
+
+39
+00:02:19,906 --> 00:02:24,929
+as subtitles to this video with the maximum accuracy possible.
+
+40
+00:02:24,929 --> 00:02:27,440
+This is my entire task.
+
+41
+00:02:27,440 --> 00:02:30,957
+We wrap up with the video now.
+
+42
+00:02:30,957 --> 00:02:34,472
 Thanks a lot for listening till here.
 

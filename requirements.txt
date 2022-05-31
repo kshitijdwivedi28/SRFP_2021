@@ -1,0 +1,6 @@
+ffmpeg
+tk
+pillow
+wave
+pydub
+speechrecognition

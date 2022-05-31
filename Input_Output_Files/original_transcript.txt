@@ -1,31 +1,49 @@
 This video is for testing purposes only.
-First few seconds were left blank intentionally to adjust for ambient noise.
-Hi, Kshitij Dwivedi here, a computer science undergrad at Jamia Millia Islamia, New Delhi.
+First few seconds were left blank intentionally 
+to adjust for ambient noise.
+Hi, Kshitij Dwivedi here, a computer science undergrad 
+at Jamia Millia Islamia, New Delhi.
 
-SRFP the Summer Research Fellowship program is organised by the three national Science Academies 
-namely Indian Academy of Sciences, Bengaluru, Indian National Science Academy, New Delhi and 
+SRFP the Summer Research Fellowship program 
+is organised by the three national Science Academies 
+namely Indian Academy of Sciences, Bengaluru, 
+Indian National Science Academy, New Delhi and 
 The National Academy of Sciences, Prayagraj every year.
 
-In this program, students/teachers are offered several two-month Summer Fellowships 
-to enable them to work with scientists associated with the three Academies.
+In this program, students/teachers are offered 
+several two-month Summer Fellowships 
+to enable them to work with scientists 
+associated with the three Academies.
 
-Students and teachers from all universities and colleges affiliated to UGC/AICTE/MCI or 
-Accredited Institutions of State Universities can apply for these Fellowships.
+Students and teachers from all universities and colleges 
+affiliated to UGC/AICTE/MCI or 
+Accredited Institutions of State Universities can 
+apply for these Fellowships.
 
-This year in 2021, I have been selected under the SRF Program and assigned under a mentor 
-Dr. Sudarshan Iyengar, an Associate Professor at Indian Institute of Technology (IIT) Ropar.
+This year in 2021, I have been selected under 
+the SRF Program and assigned under a mentor 
+Dr. Sudarshan Iyengar, an Associate Professor at 
+Indian Institute of Technology (IIT) Ropar.
 
-For this internship I have been tasked to learn the programming language python which is 
-one of the prominent languages these days due to its wide area applications in the field of 
-machine learning, data science, artificial intelligence, natural language processing and many more. 
+For this internship I have been tasked to 
+learn the programming language python 
+which is one of the prominent languages these days 
+due to its wide area applications in the field of 
+machine learning, data science, artificial intelligence, 
+natural language processing and many more. 
 I know the basic constructs of python but not in depth.
 
-So, the first task I have been assigned is to create a video introducing myself and 
-conversing a paragraph of text having myself as the speaker which I am doing right now.
-After this video, I have to extract audio from it and then convert the audio into text. 
-In simpler words, a SPEECH TO TEXT based system like Siri, Google AI assistant etc.
+So, the first task I have been assigned is 
+to create a video introducing myself and 
+conversing a paragraph of text having 
+myself as the speaker which I am doing right now.
+After this video, I have to extract audio from it 
+and then convert the audio into text. 
+In simpler words, a SPEECH TO TEXT based system 
+like Siri, Google AI assistant etc.
 
-Once done, I have to align this text with the video as subtitles to this video with the maximum accuracy possible.
+Once done, I have to align this text with the video 
+as subtitles to this video with the maximum accuracy possible.
 This is my entire task.
 We wrap up with the video now.
 Thanks a lot for listening till here.
