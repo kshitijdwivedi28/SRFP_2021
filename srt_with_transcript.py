@@ -31,10 +31,6 @@ def get_word_count(transcript_file_path):
 
 
 def align_audio_with_transcript(audio_file_path, transcript_file_path, srt_file_path):
-    
-    print(audio_file_path)
-    print(transcript_file_path)
-    print(srt_file_path)
 
     with contextlib.closing(wave.open(audio_file_path, 'r')) as audio_file:
         frames = audio_file.getnframes() 

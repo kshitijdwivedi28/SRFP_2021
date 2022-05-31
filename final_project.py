@@ -2,6 +2,18 @@ import tkinter, os, sys
 from PIL import Image
 import srt_with_transcript, srt_without_transcript, extract_audio
 
+def subtitle_sync(video_file_path, srt_file_path):
+    
+    new_srt_file_path = srt_file_path + "_optimized.srt"
+    command = f"ffsubsync {video_file_path} -i {srt_file_path} -o {new_srt_file_path}"    
+    os.system(command)
+    
+    if (os.path.isfile(new_srt_file_path)):
+        os.remove(srt_file_path) # can be commented to look for differences by using ffsubsync and without using it
+        return new_srt_file_path    
+    else:
+        return ""
+    
 
 def submit_button_action():
     video_file_path = file_path_data.get()
@@ -15,7 +27,8 @@ def submit_button_action():
         
         srt_file_path = video_file_path[ : len(video_file_path)-4 : ] + "_subtitles_with_transcript.srt"
         res = srt_with_transcript.align_audio_with_transcript(audio_file_path = audio_file_path, transcript_file_path = transcript_file_path, srt_file_path = srt_file_path)
-        if (res):
+        srt_file_path = subtitle_sync(video_file_path, srt_file_path)
+        if (res and os.path.isfile(srt_file_path)):
             res_label = tkinter.Label(root, text = f"\nSubtitles have been generated successfully. You can find them at location : {srt_file_path}", font = ("Times New Roman", 12, "bold"), fg = "green")
             res_label.pack()
         else:
@@ -24,11 +37,14 @@ def submit_button_action():
     else:
         srt_file_path = video_file_path[ : len(video_file_path)-4 : ] + "_subtitles_without_transcript.srt"
         res = srt_without_transcript.audio_to_srt_chunks(audio_file_path = audio_file_path, srt_file_path = srt_file_path)
-        if (res):
+        srt_file_path = subtitle_sync(video_file_path, srt_file_path)
+        if (res and os.path.isfile(srt_file_path)):
             res_label = tkinter.Label(root, text = f"\nSubtitles have been generated successfully. You can find them at location : {srt_file_path}", font = ("Times New Roman", 12, "bold"), fg = "green")
             res_label.pack()
         else:
             sys.exit("SYSTEM ERROR! REFER DEVELOPER TO RESOlVE")
+            
+
     
     
 def with_transcript_action():
@@ -49,6 +65,7 @@ def without_transcript_action():
 def line_break():
     line_space = tkinter.Label(root, text = "")
     line_space.pack()
+    
     
 video_file_path = ""
 audio_file_path = ""

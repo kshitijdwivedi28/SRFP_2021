@@ -42,11 +42,11 @@ def audio_to_srt_chunks(audio_file_path, srt_file_path):
     subtitles = ""
 
     audio_file = AudioSegment.from_wav(audio_file_path)  
-    # min_silence_len, silence_thresh, keep_silence can be adjusted according to the type of audio and noise in the backgroud
+    # min_silence_len, silence_thresh, keep_silence can be adjusted according to the type of audio and noise in the background
     chunks = split_on_silence(audio_file,
         min_silence_len = 500,
-        silence_thresh = -60, 
-        keep_silence = 500)
+        silence_thresh = -55, 
+        keep_silence = 1000)
 
     counter = 0
 
@@ -67,7 +67,7 @@ def audio_to_srt_chunks(audio_file_path, srt_file_path):
             audio_record = recorder.record(source)
             
             try:
-                transcript = recorder.recognize_google(audio_record, language = "en-IN")
+                transcript = recorder.recognize_google(audio_record, language = "en-IN" )
             except (RequestError, UnknownValueError):
                 print("ERROR! GOOGLE COULD NOT RECOGNIZE DATA.")
                 print(f"THIS ERROR IS ENCOUNTERED AT AUDIO CHUNK {i}")
