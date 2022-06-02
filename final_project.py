@@ -4,7 +4,7 @@ import srt_with_transcript, srt_without_transcript, extract_audio
 
 def subtitle_sync(video_file_path, srt_file_path):
     
-    new_srt_file_path = srt_file_path + "_optimized.srt"
+    new_srt_file_path = srt_file_path[:len(srt_file_path)-4:] + "_optimized.srt"
     command = f"ffsubsync {video_file_path} -i {srt_file_path} -o {new_srt_file_path}"    
     os.system(command)
     

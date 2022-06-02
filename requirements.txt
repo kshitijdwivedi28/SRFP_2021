@@ -5,3 +5,4 @@ wave
 pydub
 speechrecognition
 fuzzywuzzy
+python-Levenshtein

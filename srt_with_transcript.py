@@ -88,9 +88,7 @@ def align_audio_with_transcript(audio_file_path, transcript_file_path, srt_file_
 
     
 def force_align(transcript_file_path, input_srt_file_path):
-    
-    print("INPUT SRT PATH - ", input_srt_file_path)
-    
+
     output_srt_file_path = input_srt_file_path[:len(input_srt_file_path)-4:] + "_with_transcript.srt" 
     
     with open(input_srt_file_path, 'r') as read_srt:
