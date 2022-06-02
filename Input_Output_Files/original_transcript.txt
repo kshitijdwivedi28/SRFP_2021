@@ -1,6 +1,7 @@
 This video is for testing purposes only.
 First few seconds were left blank intentionally 
 to adjust for ambient noise.
+
 Hi, Kshitij Dwivedi here, a computer science undergrad 
 at Jamia Millia Islamia, New Delhi.
 
@@ -10,13 +11,13 @@ namely Indian Academy of Sciences, Bengaluru,
 Indian National Science Academy, New Delhi and 
 The National Academy of Sciences, Prayagraj every year.
 
-In this program, students/teachers are offered 
+In this program, students, teachers are offered 
 several two-month Summer Fellowships 
 to enable them to work with scientists 
 associated with the three Academies.
 
 Students and teachers from all universities and colleges 
-affiliated to UGC/AICTE/MCI or 
+affiliated to UGC AICTE MCI or 
 Accredited Institutions of State Universities can 
 apply for these Fellowships.
 

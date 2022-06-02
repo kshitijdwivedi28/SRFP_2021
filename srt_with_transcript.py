@@ -1,4 +1,6 @@
-import wave, contextlib, datetime
+from email.errors import InvalidMultipartContentTransferEncodingDefect
+import wave, contextlib, datetime, os
+from fuzzywuzzy import fuzz
 
 def extracting_time(curr_time):
     
@@ -84,3 +86,59 @@ def align_audio_with_transcript(audio_file_path, transcript_file_path, srt_file_
             current_time = end_time
     
     return True
+
+    
+def force_align(transcript_file_path, input_srt_file_path):
+    
+    print("INPUT SRT PATH - ", input_srt_file_path)
+    
+    output_srt_file_path = input_srt_file_path[:len(input_srt_file_path)-4:] + "_with_transcript.srt" 
+    
+    with open(input_srt_file_path, 'r') as read_srt:
+        srt_lines = read_srt.readlines()
+
+    with open(transcript_file_path, 'r') as tfile:
+        transcript_data = tfile.read()
+    
+    transcript_words = transcript_data.split()
+        
+    final_captions = []
+    initial_captions = []
+    for caption in srt_lines:
+        if caption[0] not in "0123456789" and caption[0] != "\n":
+            
+            initial_captions.append(caption)
+            
+            total_caption_words = len(caption.split())
+            transcript = []
+            for index in range(0, len(transcript_words), total_caption_words):
+                curr = ' '.join(transcript_words[index : index + total_caption_words])
+                transcript.append(curr)
+            
+            max_score = 0.0
+            possible_caption = ""
+            
+            for sentence in transcript :
+                # print(caption, sentence, fuzz.ratio(caption, sentence))
+                if (fuzz.ratio(caption, sentence) >= max_score):
+                    max_score = fuzz.ratio(caption, sentence)
+                    possible_caption = sentence
+                
+            final_captions.append(possible_caption)
+            transcript_words = transcript_words[total_caption_words::]
+            
+    index = 0
+    with open(output_srt_file_path, 'w') as srtfile:
+        for line in srt_lines:
+            if line[0] not in "0123456789" and line[0] != "\n":
+                srtfile.write(final_captions[index])
+                srtfile.write("\n")
+                index += 1
+            else:
+                srtfile.write(line)
+                    
+    if os.path.isfile(output_srt_file_path):
+        return output_srt_file_path
+    else:
+        return ""
+            

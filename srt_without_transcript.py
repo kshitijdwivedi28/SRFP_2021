@@ -90,13 +90,8 @@ def audio_to_srt_chunks(audio_file_path, srt_file_path):
         
         subtitles += srt_block
 
-    # print(time_transcript)
-    # print(srt_transcript)
-    # print(subtitles)
-
     srt_file_handler = open(srt_file_path, 'w')
     srt_file_handler.write(subtitles)
     srt_file_handler.close()
 
-    return True
 

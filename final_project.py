@@ -25,10 +25,15 @@ def submit_button_action():
         if len(transcript_file_path) > 0 and not os.path.isfile(transcript_file_path):
             sys.exit("ERROR! INCORRECT TRANSCRIPT FILE PATH")
         
-        srt_file_path = video_file_path[ : len(video_file_path)-4 : ] + "_subtitles_with_transcript.srt"
-        res = srt_with_transcript.align_audio_with_transcript(audio_file_path = audio_file_path, transcript_file_path = transcript_file_path, srt_file_path = srt_file_path)
-        srt_file_path = subtitle_sync(video_file_path, srt_file_path)
-        if (res and os.path.isfile(srt_file_path)):
+        srt_file_path = video_file_path[ : len(video_file_path)-4 : ] + "_subtitles.srt"
+        
+        # res = srt_with_transcript.align_audio_with_transcript(audio_file_path = audio_file_path, transcript_file_path = transcript_file_path, srt_file_path = srt_file_path)
+        srt_without_transcript.audio_to_srt_chunks(audio_file_path, srt_file_path)
+        new_srt_file_path = srt_with_transcript.force_align(transcript_file_path, srt_file_path)
+        final_srt_file_path = subtitle_sync(video_file_path, new_srt_file_path)
+        
+        if (os.path.isfile(final_srt_file_path)):
+            os.remove(srt_file_path)
             res_label = tkinter.Label(root, text = f"\nSubtitles have been generated successfully. You can find them at location : {srt_file_path}", font = ("Times New Roman", 12, "bold"), fg = "green")
             res_label.pack()
         else:
@@ -36,9 +41,9 @@ def submit_button_action():
          
     else:
         srt_file_path = video_file_path[ : len(video_file_path)-4 : ] + "_subtitles_without_transcript.srt"
-        res = srt_without_transcript.audio_to_srt_chunks(audio_file_path = audio_file_path, srt_file_path = srt_file_path)
+        srt_without_transcript.audio_to_srt_chunks(audio_file_path, srt_file_path)
         srt_file_path = subtitle_sync(video_file_path, srt_file_path)
-        if (res and os.path.isfile(srt_file_path)):
+        if (os.path.isfile(srt_file_path)):
             res_label = tkinter.Label(root, text = f"\nSubtitles have been generated successfully. You can find them at location : {srt_file_path}", font = ("Times New Roman", 12, "bold"), fg = "green")
             res_label.pack()
         else:

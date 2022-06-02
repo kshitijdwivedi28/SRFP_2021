@@ -19,15 +19,21 @@ def get_word_count(transcript_file_path):
     
     with open(transcript_file_path, 'r') as transcript_file_handler:
         file_data = transcript_file_handler.read()
-        sentences = file_data.split()
-        
-        for word in sentences:
-            if word == '\n':
-                continue
-            else:
-                word_count += 1
-                
-    return word_count
+
+    for ch in file_data:
+        if (ch in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"):
+            word_count += 1
+            
+    return word_count/4.7
+
+
+def count_words(data):
+    word_count = 0
+    for ch in data:
+        if (ch in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"):
+            word_count += 1
+
+    return word_count/4.7
         
 
 audio_file_path = input("ENTER AUDIO FILE PATH : ")
