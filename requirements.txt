@@ -4,3 +4,4 @@ pillow
 wave
 pydub
 speechrecognition
+fuzzywuzzy

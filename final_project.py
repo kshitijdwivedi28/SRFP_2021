@@ -71,7 +71,7 @@ def line_break():
     line_space = tkinter.Label(root, text = "")
     line_space.pack()
     
-    
+ 
 video_file_path = ""
 audio_file_path = ""
 transcript_file_path = ""
