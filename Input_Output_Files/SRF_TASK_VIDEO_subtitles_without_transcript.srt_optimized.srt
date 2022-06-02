@@ -1,33 +1,33 @@
 1
-00:00:03,490 --> 00:00:07,178
+00:00:02,990 --> 00:00:07,177
 This video is for testing purposes only.
 
 2
-00:00:07,178 --> 00:00:14,483
+00:00:07,177 --> 00:00:14,033
 First few seconds were left blank intentionally to adjust for ambient noise.
 
 3
-00:00:14,483 --> 00:00:17,383
+00:00:14,033 --> 00:00:17,382
 Hi satish dwivedi hair.
 
 4
-00:00:17,383 --> 00:00:22,783
+00:00:17,382 --> 00:00:22,783
 Uk computer science undergrad at jamia millia islamia new delhi.
 
 5
-00:00:22,783 --> 00:00:27,353
+00:00:22,783 --> 00:00:27,352
 Srsp the summer research fellowship program.
 
 6
-00:00:27,353 --> 00:00:37,343
+00:00:27,352 --> 00:00:37,342
 Is organised by the three national science academy namely indian academy of sciences bengaluru indian national science academy new delhi.
 
 7
-00:00:37,522 --> 00:00:42,323
+00:00:37,971 --> 00:00:42,322
 The national academy of sciences prayagraj every year.
 
 8
-00:00:42,323 --> 00:00:49,897
+00:00:42,322 --> 00:00:49,897
 In this program students teachers are offered several 2 months summer fellowship.
 
 9
@@ -39,66 +39,66 @@ To enable them to work with the scientist associated with the three academies.
 Student and teachers from all universities and colleges.
 
 11
-00:01:00,473 --> 00:01:06,358
+00:01:00,473 --> 00:01:06,357
 Affiliated to ugc aicte mci.
 
 12
-00:01:06,358 --> 00:01:09,759
+00:01:06,357 --> 00:01:09,759
 Updated institutions of state universities.
 
 13
-00:01:09,759 --> 00:01:12,292
+00:01:09,759 --> 00:01:12,291
 Can apply for this fellowship.
 
 14
-00:01:12,292 --> 00:01:18,342
+00:01:12,291 --> 00:01:18,341
 This year in 2021 i have been selected under the srf program.
 
 15
-00:01:18,342 --> 00:01:22,918
+00:01:18,341 --> 00:01:22,917
 And assigned under the mental doctor sachin anger.
 
 16
-00:01:22,918 --> 00:01:28,415
+00:01:22,917 --> 00:01:28,415
 Associate professor at indian institute of technology iit ropar.
 
 17
-00:01:28,415 --> 00:01:37,164
+00:01:28,415 --> 00:01:37,163
 For this internship i have been tasked to learn the programming language python which is one of the prominent languages these days.
 
 18
-00:01:37,164 --> 00:01:41,309
+00:01:37,163 --> 00:01:41,308
 Wide area applications in the field of.
 
 19
-00:01:41,309 --> 00:01:48,495
+00:01:41,308 --> 00:01:48,495
 Machine learning data science artificial intelligence natural language processing and many more.
 
 20
-00:01:48,495 --> 00:01:52,906
+00:01:48,495 --> 00:01:52,905
 I know the basic constructs of python but not in depth.
 
 21
-00:01:52,906 --> 00:02:02,088
+00:01:52,905 --> 00:02:02,087
 So the first task i have been assigned to create a video introducing myself and converting a paragraph of text.
 
 22
-00:02:02,088 --> 00:02:06,280
+00:02:02,087 --> 00:02:06,279
 Having myself as the speaker which i am doing right now.
 
 23
-00:02:06,280 --> 00:02:13,125
+00:02:06,279 --> 00:02:13,124
 After this video i have to extract audio from it and then convert the audio into text.
 
 24
-00:02:13,125 --> 00:02:20,980
+00:02:13,124 --> 00:02:20,979
 In simple words a speech to text based system like siri google assistant at 17.
 
 25
-00:02:20,980 --> 00:02:30,970
+00:02:20,979 --> 00:02:30,969
 Once done i have to align text with the video and subtitles to this video is the maximum accuracy possible this is my entire task.
 
 26
-00:02:31,889 --> 00:02:36,683
+00:02:31,888 --> 00:02:37,182
 Video now thanks a lot for listening till here.
 
