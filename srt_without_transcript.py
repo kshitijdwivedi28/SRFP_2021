@@ -48,6 +48,11 @@ def audio_to_srt_chunks(audio_file_path, srt_file_path):
         silence_thresh = -55, 
         keep_silence = 1000)
 
+    # SRT FORMAT -
+    # 1
+    # 00:00:00,000 --> 00:03:55,123
+    # Hi, I'm Kshitij
+    
     counter = 0
 
     for i, audio_chunk in enumerate(chunks, start = 1):

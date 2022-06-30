@@ -137,5 +137,5 @@ def force_align(transcript_file_path, input_srt_file_path):
     if os.path.isfile(output_srt_file_path):
         return output_srt_file_path
     else:
-        return ""
-            
+        return "" 
+     
